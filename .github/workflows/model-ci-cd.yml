@@ -1,0 +1,14 @@
+name: Model CI/CD
+on: workflow_dispatch
+jobs:
+  model-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Traer el código
+        uses: actions/checkout@v6
+      - name: Instalar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
