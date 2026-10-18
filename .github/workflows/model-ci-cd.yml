@@ -31,3 +31,4 @@ jobs:
     steps:
       - name: Desplegar modelo
         run: echo "Desplegando el modelo de riesgo en AWS... (simulado)"
+    needs: model-ci
