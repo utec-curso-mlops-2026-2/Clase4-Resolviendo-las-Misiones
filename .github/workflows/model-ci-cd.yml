@@ -12,3 +12,17 @@ jobs:
           python-version: '3.12'
       - name: Instalar dependencias
         run: pip install -r requirements.txt
+      - name: Descargar datos
+        run: python src/0-download-data.py
+      - name: Separar train y test
+        run: python src/1-split-dataset.py
+      - name: Preprocesar train
+        run: python src/2-preprocess-dataset-train.py
+      - name: Preparar test
+        run: python src/3-prepare-dataset-test.py
+      - name: Entrenar y evaluar modelos
+        run: python src/4-train-evaluate-models.py
+      - name: Seleccionar mejor modelo
+        run: python src/5-select-best-model.py
+      - name: Mostrar métricas
+        run: cat outputs/train/metrics/train_test_metrics.csv
