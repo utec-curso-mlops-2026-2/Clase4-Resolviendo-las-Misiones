@@ -1,5 +1,5 @@
 # Modelo de riesgo de crédito · Plantilla del curso MLOps (UTEC Posgrado)
-
+cambio mision4
 Pipeline de Machine Learning que estima la probabilidad de incumplimiento de pago de un solicitante de crédito, usando un Random Forest.
 
 ## Estructura
